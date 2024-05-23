@@ -1,0 +1,43 @@
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 1px;
+    position: fixed; /* Establece la posición fija */
+    top: 0; /* Coloca la barra en la parte superior */
+    width: 100%; /* Asegura que ocupe toda la anchura de la pantalla */
+    background-color: #1e5ede; /* Cambia el color de fondo si es necesario */
+    z-index: 1000; /* Ajusta la posición en el eje Z para que esté encima de otros elementos */
+    border-radius: 10px;
+}
+
+.navbar-logo {
+    height: 50px;
+}
+
+.navbar-logo-container {
+    flex: 1; /* Permite que el logo ocupe el espacio necesario */
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+}
+
+.navbar-buttons {
+    display: flex;
+    flex: 2; /* Permite que los botones ocupen el espacio necesario */
+    justify-content: center; /* Centra los botones horizontalmente */
+}
+
+.navbar-button {
+    margin: 0 10px; /* Espaciado entre los botones */
+}
+
+.navbar-cart-container {
+    flex: 1; /* Permite que el carrito ocupe el espacio necesario */
+    display: flex;
+    justify-content: flex-end; /* Alinea el carrito a la derecha */
+}
+
+.navbar-cart {
+    margin-left: 20px;
+
+}
