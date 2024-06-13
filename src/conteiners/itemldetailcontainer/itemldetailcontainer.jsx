@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react" 
-import {useParams} from "react-router-dom"
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const ItemDetailContainer = () => {
-    const [product, setProducts] = useState()
-    const {idProduct} = useParams()
+  const [product, setProduct] = useState();
+  const { id } = useParams();
 
-    useEffect (() =>{
-        fetch(`https://fakestoreapi.com/products/${idProduct}`)
+  useEffect(() => {
+    fetch(`https://fakestoreapi.com/products/${id}`)
       .then((res) => res.json())
-      .then((json) => setProducts(json))
-      .catch(e => console.error(e))
-    }, [])
+      .then((json) => setProduct(json))
+      .catch((e) => console.error(e));
+  }, [id]);
 
-    return(
-        <div>{product?.title}</div>
-    )
-}
+  return <div>{product?.title}</div>;
+};
 
-
-export default ItemDetailContainer
+export default ItemDetailContainer;
